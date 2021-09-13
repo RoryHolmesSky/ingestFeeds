@@ -314,8 +314,6 @@ def master(filepath, sysName):
     data = json.load(file)
     run_program(data, commId, sysName)
 
-#master()
-
 
 dirname = os.path.dirname(__file__)
 singleFileName = os.listdir(path='.')
@@ -332,8 +330,5 @@ for each in singleFileName:
             if tab.endswith(".avsc"):
                 filepath = dirname + "/" + each + "/" + tab
                 filepath = filepath.replace("\\","/")
-                print (filepath)
-                print (tab)
-                print (each)
                 master(filepath, each)
 
