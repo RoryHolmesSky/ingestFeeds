@@ -1,0 +1,680 @@
+{
+  "type" : "record",
+  "name" : "BrazeMarketingPushNotificationEvents",
+  "fields" : [ {
+    "name" : "events",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "events",
+        "fields" : [ {
+          "name" : "data",
+          "type" : ["null", {
+            "type" : "record",
+            "name" : "data",
+            "fields" : [ {
+              "name" : "customEventType",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "eventName",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "customFlags",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "eventTimestampUnixtimeMs",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "eventId",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "sourceMessageId",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "custom_attributes",
+                "type" : ["null", {
+                  "type" : "record",
+                   "name" : "custom_attributes",
+                    "fields" : [ {
+                        "name" : "canvasId",
+                        "type" : [ "null", "string" ],
+                        "default" : null
+                        }, {
+                        "name" : "canvasStepId",
+                        "type" : [ "null", "string" ],
+                        "default" : null
+                        }, {
+                        "name" : "canvasStepName",
+                        "type" : [ "null", "string" ],
+                        "default" : null
+                        }, {
+                        "name" : "canvasVariationId",
+                        "type" : [ "null", "string" ],
+                        "default" : null
+                        }, {
+                        "name" : "canvasVariationName",
+                        "type" : [ "null", "string" ],
+                        "default" : null
+                        }, {
+                        "name" : "canvasName",
+                        "type" : [ "null", "string" ],
+                        "default" : null
+                        }, {
+                        "name" : "dispatchId",
+                        "type" : [ "null", "string" ],
+                        "default" : null
+                        }, {
+                        "name" : "appId",
+                        "type" : [ "null", "string" ],
+                        "default" : null
+                        }, {
+                        "name" : "mParticleSourceFeed",
+                        "type" : [ "null", "string" ],
+                        "default" : null
+                        } ]
+                    }
+                ], "default" : null
+            }
+            ]
+           }
+          ], "default" : null
+        }, {
+            "name" : "eventType",
+            "type" : [ "null", "string" ],
+            "default" : null
+        }
+        ]
+      }
+    }
+    ], "default" : null
+  }, {
+            "name" : "mpid",
+            "type" : [ "null", "long" ],
+            "default" : null
+    }, {
+            "name" : "mpidBatchTimestampUnixtimeMs",
+            "type" : [ "null", "string" ],
+            "default" : null
+    }, {
+            "name" : "batchId",
+            "type" : [ "null", "long" ],
+            "default" : null
+    }, {
+            "name" : "messageId",
+            "type" : [ "null", "string" ],
+            "default" : null
+    },  {
+            "name" : "schemaVersion",
+            "type" : [ "null", "long" ],
+            "default" : null
+    },  {
+            "name" : "device_info",
+            "type" : ["null", {
+              "type" : "record",
+              "name" : "device_info",
+                "fields": [ {
+                    "name" : "androidUuid",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "platform",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "deviceModel",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "pushToken",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "androidAdvertisingId",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "isDst",
+                    "type" : [ "null", "boolean" ],
+                    "default" : null
+                    }, {
+                    "name" : "iosAdvertisingId",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "iosIdfv",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }]
+            }
+            ],  "default" : null
+    },  {
+            "name" : "application_info",
+            "type" : ["null", {
+              "type" : "record",
+              "name" : "application_info",
+                "fields": [ {
+                    "name" : "package",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "os",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }]
+            }
+            ], "default" : null
+    }, {
+            "name" : "user_attributes",
+            "type" : ["null", {
+              "type" : "record",
+              "name" : "user_attributes",
+                "fields": [ {
+                    "name" : "adSmartTrackingId",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "userType",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "other7",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "emailMarketing",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "pushNotifications",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "userFirstVisitDate",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "userProduct",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "userPlatform",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "userPeacockAccountTier",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "userMvpd",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "userPeacockRegistrationReferrer",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "userPeacockSignInType",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "userPeacockConverted",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "userPeacockRegistrationDate",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "productTier",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "freeTrial",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "autoRenewOff",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "last5DeviceTypes",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "box9",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "repertoire",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "last5DevicePlatform",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "nextBestAction",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "marketingPersonas",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "primaryDevice",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "topContentAffinity",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs1",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs2",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs3",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs4",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs5",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs6",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs7",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs8",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs9",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs10",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs11",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    },{
+                    "name" : "dascs12",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs13",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs14",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs15",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs16",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs17",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs18",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs19",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    },{
+                    "name" : "dascs20",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs21",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs22",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs23",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs24",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs25",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs26",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "dascs27",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "deeplinkerSpecification",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "voucher",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "voucherDaysToExpiration",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "voucherExpirationDate",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "promoUnitIncreaseSegment",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "billingCycle",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "paymentPlatform",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "iosTvosTrackingEnabledFlag",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "signupDevice",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "lapseStatusChangeDate",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "churnStatusChangeDate",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "lapseStatus",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "churnStatus",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "marketingHoldout",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "deviceRepertoire",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "maaStatus",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "coppaTitleViewed",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "grossAddDate",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "coppaTitleFirstViewDate",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "towerHeistControlGroups",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "coppaTitleMostRecentViewDate",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "towerHeistTargetGroups",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "wwe1",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "wwe2",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "wwe3",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "wwe4",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "partnerStatus",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "braveNewWorldOriginal",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "cyberMondayCode",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "cyberMondayOffer",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "cyberMondayAudience",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "userWatchlist",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }]
+            }], "default" : null
+    },
+    {
+      "name" : "deletedUserAttributes",
+      "type" : [ "null", {
+        "type" : "array",
+        "items" : "string"
+      } ],
+      "default" : null
+    },
+    {
+    "name" : "user_identities",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "user_identities",
+        "fields" : [ {
+                    "name" : "identityType",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "identity",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "identityTimestampUnixtimeMs",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }]
+      }
+    }
+    ], "default" : null
+    },
+    {
+            "name" : "source_info",
+            "type" : ["null", {
+              "type" : "record",
+              "name" : "source_info",
+                "fields": [ {
+                    "name" : "channel",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }, {
+                    "name" : "partner",
+                    "type" : [ "null", "string" ],
+                    "default" : null
+                    }]
+            }
+            ], "default" : null
+    },
+    {
+        "name" : "ip",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+      "name" : "systemNotifications",
+      "type" : [ "null", {
+        "type" : "array",
+        "items" : "string"
+      } ],
+      "default" : null
+    },
+    {
+        "name" : "environment",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "context",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "messageType",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "fileTimestamp",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "sdpKafkaKey",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "sdpKafkaOffset",
+        "type" : [ "null", "long" ],
+        "default" : null
+    },
+    {
+        "name" : "sdpDIFTimestamp",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "sdpSourceTimestamp",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "sdpSourceFileName",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "sdpSubjectID",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "sdpSourceSystemName",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "sdpSourceEventName",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "sdpSourceTransport",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "sdpSourceTerritory",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "sdpSourceProvider",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "sdpSourceProposition",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "sdpSourceOrigin",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "sdpSourceType",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "sdpSource",
+        "type" : [ "null", "string" ],
+        "default" : null
+    },
+    {
+        "name" : "sdpBusinessDate",
+        "type" : [ "null", "string" ],
+        "default" : null
+    }
+]
+}

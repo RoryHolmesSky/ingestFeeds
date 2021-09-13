@@ -1,0 +1,30 @@
+{
+	"type": "record",
+	"name": "NBCUAtomAppleProduct",
+	"fields": [
+        {
+        "name" : "productids",
+        "type" : {
+          "type" : "map",
+          "values" : {
+            "type" : "record",
+            "name" : "productids",
+            "fields" : [ {
+                 "name" : "rank",
+                 "type" : [ "null", "long" ],
+                 "default" : null
+            }, {
+                 "name" : "peacockProductId",
+                 "type" : [ "null", "string" ],
+                 "default" : null
+            }, {
+                 "name" : "productIdentifier",
+                 "type" : [ "null", "string" ],
+                 "default" : null
+               }  
+            ]
+          }
+        }
+      }
+    ]
+}

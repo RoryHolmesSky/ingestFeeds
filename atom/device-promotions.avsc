@@ -1,0 +1,128 @@
+{
+  "type" : "record",
+  "name" : "DevicePromotions",
+  "fields" : [ {
+    "name" : "links",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "links",
+      "fields" : [ {
+        "name" : "self",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "id",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "type",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "originalOrderId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "attributes",
+    "type" : {
+      "type" : "record",
+      "name" : "attributes",
+      "fields" : [ {
+        "name" : "childNodeTypes",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : "string"
+        } ],
+        "default" : null
+      }, {
+        "name" : "createdDate",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "relationships",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "relationships",
+      "fields" : [ {
+        "name" : "items",
+        "type" : [ "null", {
+          "type" : "record",
+          "name" : "items",
+          "fields" : [ {
+            "name" : "data",
+            "type" : [ "null", {
+              "type" : "array",
+              "items" : {
+                "type" : "record",
+                "name" : "data",
+                "fields" : [ {
+                  "name" : "id",
+                  "type" : [ "null", "string" ],
+                  "default" : null
+                }, {
+                  "name" : "type",
+                  "type" : [ "null", "string" ],
+                  "default" : null
+                }, {
+                  "name" : "links",
+                  "type" : [ "null", {
+                    "type" : "record",
+                    "name" : "relationships_items_data_links",
+                    "fields" : [ {
+                      "name" : "self",
+                      "type" : [ "null", "string" ],
+                      "default" : null
+                    } ]
+                  } ],
+                  "default" : null
+                }, {
+                  "name" : "attributes",
+                  "type" : [ "null", {
+                    "type" : "record",
+                    "name" : "relationships_attributes",
+                    "fields" : [ {
+                      "name" : "childNodeTypes",
+                      "type" : [ "null", {
+                        "type" : "array",
+                        "items" : "string"
+                      } ],
+                      "default" : null
+                    }, {
+                      "name" : "createdDate",
+                      "type" : [ "null", "string" ],
+                      "default" : null
+                    }, {
+                      "name" : "campaignId",
+                      "type" : [ "null", {
+                        "type" : "array",
+                        "items" : "string"
+                      } ],
+                      "default" : null
+                    }, {
+                      "name" : "deliveryCode",
+                      "type" : [ "null", "string" ],
+                      "default" : null
+                    }, {
+                      "name" : "title",
+                      "type" : [ "null", "string" ],
+                      "default" : null
+                    } ]
+                  } ],
+                  "default" : null
+                } ]
+              }
+            } ],
+            "default" : null
+          } ]
+        } ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  } ]
+}

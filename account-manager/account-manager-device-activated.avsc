@@ -1,0 +1,57 @@
+{
+  "type" : "record",
+  "name" : "AccountManagerDeviceActivated",
+  "fields" : [ {
+    "name" : "originatingSystem",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "activityType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "providerTerritory",
+    "type" : "string"
+  }, {
+    "name" : "provider",
+    "type" : "string"
+  }, {
+    "name" : "proposition",
+    "type" : "string"
+  }, {
+    "name" : "householdId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "firstActivatedDate",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "thirdParty",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "boxType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "orderId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "originalOrderId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "status",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "serial",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "activityTimestamp",
+    "type" : "string"
+  } ]
+}

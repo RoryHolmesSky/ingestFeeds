@@ -1,0 +1,72 @@
+{
+  "type" : "record",
+  "name" : "AccountManagerCancellationOffer",
+  "fields" : [ {
+    "name" : "originatingSystem",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "activityTimestamp",
+    "type" : "string"
+  }, {
+    "name" : "activityType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "providerTerritory",
+    "type" : "string"
+  }, {
+    "name" : "provider",
+    "type" : "string"
+  }, {
+    "name" : "proposition",
+    "type" : "string"
+  }, {
+    "name" : "householdId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "subscriptionType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "offer",
+    "type" : {
+      "type" : "record",
+      "name" : "offer",
+      "fields" : [ {
+        "name" : "voucherCode",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "primaryProductId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "category",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    }
+  }, {
+    "name" : "crossOffer",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "crossOffer",
+      "fields" : [ {
+        "name" : "voucherCode",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "primaryProductId",
+        "type" : [ "null", "string" ],
+        "default" : null
+      }, {
+        "name" : "category",
+        "type" : [ "null", "string" ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  } ]
+}

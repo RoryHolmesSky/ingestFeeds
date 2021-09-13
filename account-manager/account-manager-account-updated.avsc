@@ -1,0 +1,258 @@
+{
+  "type" : "record",
+  "name" : "AccountManagerAccountUpdated",
+  "fields" : [ {
+    "name" : "originatingSystem",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "activityType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "providerTerritory",
+    "type" : "string"
+  }, {
+    "name" : "provider",
+    "type" : "string"
+  }, {
+    "name" : "proposition",
+    "type" : "string"
+  }, {
+    "name" : "householdId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "addresses",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "addresses",
+      "fields" : [ {
+        "name" : "billing",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : {
+            "type" : "record",
+            "name" : "billing",
+            "fields" : [ {
+              "name" : "addresseeTitle",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "addresseeFirstName",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "addresseeLastName",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "alias",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "addressLine1",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "addressLine2",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "addressLine3",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "houseNumber",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "subBuildingNumber",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "houseName",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "subBuildingName",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "street",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "locality",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "town",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "county",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "postCode",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "province",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "nif",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "customsCountryCode",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "countryCode",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "default",
+              "type" : [ "null", "boolean" ],
+              "default" : null
+            } ]
+          }
+        } ],
+        "default" : null
+      }, {
+        "name" : "delivery",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : {
+            "type" : "record",
+            "name" : "delivery",
+            "fields" : [ {
+              "name" : "addresseeTitle",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "addresseeFirstName",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "addresseeLastName",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "alias",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "addressLine1",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "addressLine2",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "addressLine3",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "houseNumber",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "subBuildingNumber",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "houseName",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "subBuildingName",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "street",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "locality",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "town",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "county",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "postCode",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "province",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "nif",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "customsCountryCode",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "countryCode",
+              "type" : [ "null", "string" ],
+              "default" : null
+            }, {
+              "name" : "default",
+              "type" : [ "null", "boolean" ],
+              "default" : null
+            } ]
+          }
+        } ],
+        "default" : null
+      } ]
+    } ],
+    "default" : null
+  }, {
+    "name" : "trialsUsed",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "trialsUsed",
+        "fields" : [ {
+          "name" : "id",
+          "type" : [ "null", "string" ],
+          "default" : null
+        }, {
+          "name" : "dateUsed",
+          "type" : [ "null", "string" ],
+          "default" : null
+        }, {
+          "name" : "category",
+          "type" : [ "null", "string" ],
+          "default" : null
+        } ]
+      }
+    } ],
+    "default" : null
+  }, {
+    "name" : "activityTimestamp",
+    "type" : "string"
+  }, {
+    "name" : "acquiredBy",
+    "type" : [ "null", "string" ],
+    "default" : null
+   }, {
+     "name" : "acquiredByUpdateTimestamp",
+     "type" : [ "null", "string" ],
+     "default" : null
+   } ]
+}
