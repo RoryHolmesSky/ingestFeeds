@@ -2,8 +2,12 @@ import requests
 import json
 import os
 
-my_username = 'TestUser'
-my_password = 'TestUser'
+#fill these in with the correct values
+my_username = 'dummy-da-account'
+my_password = 'dummy-da-account'
+instance = "onedata-dev"
+
+
 columnId = "00000000-0000-0000-0000-000000031008"
 tableId = "00000000-0000-0000-0000-000000031007"
 schemaId = "00000000-0000-0000-0001-000400000002"
@@ -12,6 +16,7 @@ multipleValueId = "660bd800-0ba7-485b-8fcb-4e54a4dd5b49"
 mappingId = "110ffa26-b351-4884-a398-9ebf96f52d2c"
 domainId = "d81c7ff6-52e2-4c97-ae4a-4fc7fdcaf507"
 
+
 def run_git():
     os.system("git init")
     os.system("git pull https://github.com/sky-uk/gottdata-io-config.git")
@@ -19,7 +24,8 @@ def run_git():
 
 def create_system(path, username, password):
     name = path
-    url = r'https://sky-dev.collibra.com/rest/2.0/assets'
+    url = f'https://sky-{instance}.collibra.com/rest/2.0/assets'
+    print (url)
     inputs = {"name" : name,
               "domainId" : domainId,
               "typeId" : systemId}
@@ -32,7 +38,7 @@ def create_system(path, username, password):
     return name
 
 def get_system_id(data, username, password):
-    url = r'https://sky-dev.collibra.com/rest/2.0/assets'
+    url = f'https://sky-{instance}.collibra.com/rest/2.0/assets'
     input_params = {"name": create_system(data, username=my_username, password=my_password),
                     "domainId" : domainId,
                     "nameMatchMode" : "EXACT"}
@@ -41,7 +47,7 @@ def get_system_id(data, username, password):
     return results[0]['id']
 
 def get_asset_id(assetName, mode):
-    url = r'https://sky-dev.collibra.com/rest/2.0/assets'
+    url = f'https://sky-{instance}.collibra.com/rest/2.0/assets'
     input_params = {"name": assetName,
                     "domainId" : domainId,
                     "nameMatchMode" : mode}
@@ -50,7 +56,7 @@ def get_asset_id(assetName, mode):
     return results[0]['id']
 
 def get_asset_id_from_tag(assetName, mode, tag):
-    url = r'https://sky-dev.collibra.com/rest/2.0/assets'
+    url = f'https://sky-{instance}.collibra.com/rest/2.0/assets'
     input_params = {"name": assetName,
                     "tagNames" : [tag],
                     "domainId" : domainId,
@@ -62,7 +68,7 @@ def get_asset_id_from_tag(assetName, mode, tag):
 
 def add_table(data, username, password):
     name = data["name"]
-    url = r'https://sky-dev.collibra.com/rest/2.0/assets'
+    url = f'https://sky-{instance}.collibra.com/rest/2.0/assets'
     inputs = {"typeId": tableId,
             "name" : name,
             "domainId" : domainId}
@@ -87,7 +93,7 @@ def add_column(data, domainID, tableName, username, password):
         else:
                 full_name = tableName + "_" + name
         print (full_name)
-        url = r'https://sky-dev.collibra.com/rest/2.0/assets'
+        url = f'https://sky-{instance}.collibra.com/rest/2.0/assets'
         inputs = {"typeId": columnId,
                 "name" : full_name,
                 "domainId" : domainID,
@@ -102,7 +108,7 @@ def add_column(data, domainID, tableName, username, password):
         return full_name
 
 def add_data_source(columnId, value):
-    url = 'https://sky-dev.collibra.com/rest/2.0/assets/' + columnId + '/tags'
+    url = f'https://sky-{instance}.collibra.com/rest/2.0/assets/' + columnId + '/tags'
     input_params = {
                     "tagNames": [
                     value
@@ -118,7 +124,7 @@ def add_data_source(columnId, value):
 def add_data_type(columnId, value):
     if type(value) == list:
         value = value[1]
-    url = r'https://sky-dev.collibra.com/rest/2.0/attributes'
+    url = f'https://sky-{instance}.collibra.com/rest/2.0/attributes'
     input_params = {"typeId" : "00000000-0000-0000-0000-000000000219",
                     "value" : value.upper(),
                     "assetId" : columnId}
@@ -132,7 +138,7 @@ def add_data_type(columnId, value):
 def add_default(columnId, default):
     if type(default) == list:
         default = default[0]
-    url = r'https://sky-dev.collibra.com/rest/2.0/attributes'
+    url = f'https://sky-{instance}.collibra.com/rest/2.0/attributes'
     input_params = {"typeId" : "00000000-0000-0000-0001-000500000014",
                     "value" : default,
                     "assetId" : columnId}
@@ -144,7 +150,7 @@ def add_default(columnId, default):
     #print ("uploading default -" + SorF)
 
 def add_multi_value(columnId):
-        url = r'https://sky-dev.collibra.com/rest/2.0/attributes'
+        url = f'https://sky-{instance}.collibra.com/rest/2.0/attributes'
         input_params = {"typeId" : "660bd800-0ba7-485b-8fcb-4e54a4dd5b49",
                         "value" : True,
                         "assetId" : columnId}
@@ -157,7 +163,7 @@ def add_multi_value(columnId):
 
 def add_enum(columnId, symbols):
         for val in symbols:
-            url = r'https://sky-dev.collibra.com/rest/2.0/attributes'
+            url = f'https://sky-{instance}.collibra.com/rest/2.0/attributes'
             input_params = {"typeId" : "9a66dbf4-c31d-4d42-a38e-362c6fe19094",
                             "value" : val,
                             "assetId" : columnId}
@@ -169,7 +175,7 @@ def add_enum(columnId, symbols):
             #print ("uploading enum -" + SorF)
 
 def relate_column_to_table(tableId, columnId):
-    url = r'https://sky-dev.collibra.com/rest/2.0/relations'
+    url = f'https://sky-{instance}.collibra.com/rest/2.0/relations'
     input_params = {"typeId" : "00000000-0000-0000-0000-000000007042",
                     "sourceId" : columnId,
                     "targetId" : tableId}
@@ -181,7 +187,7 @@ def relate_column_to_table(tableId, columnId):
     #print ("relating columns to tables -" + SorF)
 
 def relate_table_to_system(systemID, tableID):
-    url = r'https://sky-dev.collibra.com/rest/2.0/relations'
+    url = f'https://sky-{instance}.collibra.com/rest/2.0/relations'
     input_params = {"typeId" : "379399c4-fca8-4c3f-95c5-5f9c4b389872",
                     "sourceId" : systemID,
                     "targetId" : tableID}
@@ -193,7 +199,7 @@ def relate_table_to_system(systemID, tableID):
     print ("relating tables to system -" + SorF)
 
 def relate_system_to_layer(systemId):
-    url = r'https://sky-dev.collibra.com/rest/2.0/relations'
+    url = f'https://sky-{instance}.collibra.com/rest/2.0/relations'
     input_params = {"typeId" : "13a31e47-b77c-41f2-a416-d386b9e81c44",
                     "sourceId" : "40b28a42-0fbb-4e32-80f6-7eecff1d8d7d",
                     "targetId" : systemId}
